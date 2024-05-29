@@ -1,0 +1,1969 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    background-color: rgba(159, 159, 159, 0.159);
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.105);
+    padding: 20px;
+    /* background-color: green; */
+    z-index: 99999999999999;
+}
+
+.Menu_Btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    display: none;
+}
+
+.Mobile_Menu {
+    width: 100%;
+    height: 0;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.Mobile_Menu ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Mobile_Menu li {
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.201);
+    list-style: none;
+    width: 80%;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Mobile_Menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 7px 20px;
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+header>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Location_Links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: #65c8d0; */
+    padding: 20px;
+    gap: 15px;
+}
+
+.Location_Links>div {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Location_Links h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.778);
+    font-weight: 300;
+    border: 1px solid rgba(255, 255, 255, 0.103);
+    padding: 10px 20px;
+}
+
+.Location_Links ul {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Location_Links li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.103);
+}
+
+.Location_Links li:nth-child(5),
+.Location_Links li:nth-child(6),
+.Location_Links li:last-child {
+    width: 40px;
+    height: 20px;
+    border: none;
+}
+
+.Location_Links li>a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.Location_Links li>button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.Location_Links li>button>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Logo {
+    width: 150px;
+    height: 60px;
+    /* background-color: #65c8d0; */
+}
+
+.Logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.Logo img:last-child{
+    display: none;
+}
+
+.Menu {
+    width: auto;
+}
+
+.Menu_Links {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.Menu_Links li {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.103);
+    padding: 5px 10px;
+}
+
+.Menu_Links li::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    left: 0;
+    top: 90%;
+    background-color: rgb(255, 255, 255);
+    transition: .4s;
+}
+
+.Menu_Links li:hover::before {
+    width: 100%;
+}
+
+.menu_main_nav>li li,
+.menu_main_nav>li li>a {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.8533px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.Menu_Links>li>a {
+    display: block;
+    /* padding: 10px 15px;
+    text-align: center;
+    background-color: aliceblue; */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.Pages {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    width: 450%;
+    left: -100%;
+    padding: 0 20px;
+    height: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    transition: .4s;
+    position: absolute;
+    top: 100%;
+    gap: 5px;
+    list-style: none;
+}
+
+.Pages li {
+    width: 100%;
+}
+
+/* .Pages>li>a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    transition: .4s;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+} */
+
+.Pages>li::before {
+    background-color: white;
+}
+
+.Pages a:hover {
+    background-color: #65c8d0;
+    color: white;
+}
+
+.Menu li:nth-child(4):hover .Pages {
+    height: 250px;
+    padding: 10px 20px;
+}
+
+.Baner {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+}
+
+.Baner>video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #058296;
+    inset: 0;
+}
+
+.Baner_Info_Box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    padding: 200px;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.162);
+    background: linear-gradient(rgba(0, 0, 0, 0.573), rgba(0, 0, 0, 0.539), rgba(0, 0, 0, 0.619));
+    gap: 15px;
+}
+
+.Baner_Info_Box div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.Baner_Info_Box button {
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #058296;
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+}
+
+.Baner_Info_Box h2 {
+    color: white;
+    font-size: 70px;
+    text-shadow: 0 0 5px black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Baner_Info_Box h2>span {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.Info_Consultation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 20px;
+}
+
+.Info_Consultation>div {
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    gap: 15px;
+    padding: 40px;
+    background-color: white;
+}
+
+.Info_Consultation>div:first-child {
+    transform: translateY(-100px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Info_Consultation>div:nth-child(3) {
+    align-items: center;
+    height: 400px;
+}
+
+.Info_Consultation>div>div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Info_Consultation input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: .4s;
+}
+
+.Info_Consultation input:focus {
+    border: 1px solid rgba(0, 0, 0, 0.323);
+}
+
+.Info_Consultation select {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: .4s;
+    outline: none;
+}
+
+.Info_Consultation select:focus {
+    border: 1px solid rgba(0, 0, 0, 0.323);
+}
+
+.Info_Consultation button {
+    width: 100%;
+    padding: 10px 60px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #13a2b7;
+    color: white;
+    font-weight: 600;
+}
+
+.Info_Consultation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Info_Consultation a {
+    position: absolute;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    background-color: #058296;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.Info_Consultation span {
+    color: #058296;
+    margin: 10px;
+}
+
+.section-title h2 {
+    color: black;
+    font-weight: 700px;
+    margin-top: 8px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.Service_Container {
+    padding: 40px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.Servise_Title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Servise_Title h1 {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.312);
+}
+
+.Servise_Title h4 {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.312);
+}
+
+.Service_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 20px;
+}
+
+.Service {
+    width: 370px;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+    border-radius: 15px;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.196);
+}
+
+.Service img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.Service:nth-child(3) img {
+    width: 80px;
+    height: 80px;
+    margin: 1px;
+}
+
+.Service h3 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.Service p {
+    text-align: center;
+}
+
+.Procedure_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./Img/421568235.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 20px;
+
+}
+
+.Procedure_section {
+    width: 65%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Procedure_Title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Procedure_Title h4 {
+    color: #13a2b7;
+}
+
+.Procedure_Title h2 {
+    color: white;
+}
+
+.Procedure_Title button {
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #13a2b7;
+    color: white;
+    cursor: pointer;
+    font-size: 23px;
+    transition: .4s;
+}
+
+.Procedure_Title button:hover {
+    background-color: #13a2b7;
+}
+
+.Procedure_Title div {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Procedure_Box {
+    width: 100%;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.Procedure {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    transition: .4s;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 20px;
+    cursor: pointer;
+}
+
+.Procedure img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #13a2b7;
+}
+
+.Procedure:hover {
+    background-color: #13a2b7;
+}
+
+.Procedure:hover h3 {
+    color: white;
+}
+
+.Procedure:hover p {
+    color: white;
+}
+
+.Procedure .Info {
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Procedure h3 {
+    color: black;
+    transition: .4s;
+}
+
+.Procedure p {
+    color: black;
+    transition: .4s;
+}
+
+.gallery__img {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    gap: 10px;
+}
+
+.gallery__img>div:last-child {
+    width: 30%;
+    height: 800px;
+    background-image: url(./Img/IMG_5660.PNG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.Gallery {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: #058296; */
+    gap: 30px;
+}
+
+.Gallery div {
+    width: 400px;
+    height: 390px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.Gallery div:first-child {
+    background-image: url(./Img/IMG_3534.JPG);
+}
+
+.Gallery div:nth-child(2) {
+    background-image: url(./Img/IMG_3538.JPG);
+}
+
+.Gallery div:nth-child(3) {
+    background-image: url(./Img/IMG_3550.JPG);
+}
+
+.Gallery div:nth-child(4) {
+    background-image: url(./Img/IMG_3552.JPG);
+}
+
+.Gallery div:nth-child(5) {
+    background-image: url(./Img/IMG_3544.JPG);
+}
+
+.Gallery div:nth-child(6) {
+    background-image: url(./Img/IMG_5093.JPG);
+}
+
+.Advices_container h3 {
+    background-color: rgb(93, 93, 93);
+    align-items: center;
+}
+
+
+.Advices_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 20px;
+    gap: 20px;
+}
+
+.title_Button {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.title_Button div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.title_Button button {
+    padding: 15px 40px;
+    width: 250px;
+    border-radius: 5px;
+    text-align: right;
+    border-color: #13a2b7;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+}
+
+.title_Button h5 {
+    color: gray;
+}
+
+.Advices_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.Advices {
+    width: 570px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.196);
+}
+
+.Advices div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.Advices a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.Advices a:hover {
+    text-decoration: underline;
+}
+
+.Advices p {
+    color: gray;
+}
+
+
+.footer {
+    background: #121c1d;
+    padding-top: 40px;
+    display: block;
+}
+
+.footer__top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 65px;
+}
+
+.div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.container {
+    max-width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FooterLogo {
+    width: 150px;
+    height: 60px;
+}
+
+.FooterLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer>div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 220px;
+    padding: 20px;
+}
+
+footer>div>div {
+    width: auto;
+}
+
+.Logo a {
+    width: 150px;
+    background-color: transparent;
+}
+
+.Social_Links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Social_Links li {
+    overflow: hidden;
+    list-style: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.Social_Links a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    font-size: 25px;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer input {
+    padding: 10px 20px;
+    outline: none;
+    font-size: 18px;
+    border: 2px solid #65c8d0;
+    color: white;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: transparent;
+}
+
+footer input:nth-child(2) {
+    background-color: #65c8d0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+}
+
+.footer_Info {
+    width: 100%;
+    border-top: 1px solid rgb(54, 54, 54);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+.footer_Info>div:first-child li {
+    justify-content: space-between;
+}
+
+.footer_Info>div:last-child {
+    width: 450px;
+}
+
+.footer_Info h5 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.footer_Info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer_Info ul li {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    color: hsl(0, 0%, 100%);
+}
+
+.footer_Info ul li a {
+    color: rgb(194, 194, 194);
+}
+
+.footer_Info ul li i {
+    font-size: 18px;
+    color: #65c8d0;
+}
+
+.footer__copyright {
+    background: #12191a;
+    padding: 25px 0 20px;
+    margin-top: 30px;
+}
+
+
+.footer_bottom {
+    height: 100%;
+    display: flex;
+    border-top: 1px solid rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer_bottom a {
+    text-decoration: none;
+    color: #65c8d0;
+}
+
+.footer_bottom>div {
+    width: 650px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    flex-wrap: wrap;
+}
+
+.footer_bottom>div>p {
+    width: 100%;
+    height: auto;
+    color: #c4c4c4;
+    font-size: 13px;
+}
+
+.footer_bottom ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 25px;
+}
+
+.footer_bottom li {
+    width: auto;
+    color: #c4c4c4;
+    font-size: 13px;
+}
+
+@media (min-width:1200px) {
+    .Location_Links {
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+    .Location_Links h3 {
+        font-size: 11px;
+    }
+
+    .Menu_Links>li>a {
+        font-size: 15px;
+    }
+
+    .Baner_Info_Box {
+        width: 100%;
+        padding: 100px 40px;
+    }
+
+    .Baner_Info_Box h2 {
+        font-size: 50px;
+    }
+
+    .Baner_Info_Box span {
+        font-size: 30px;
+    }
+
+    .Baner_Info_Box button {
+        font-size: 15px;
+    }
+
+    .Info_Consultation h2 {
+        font-size: 20px;
+    }
+
+    .Info_Consultation h1 {
+        font-size: 25px;
+    }
+
+    .Info_Consultation p {
+        font-size: 12px;
+    }
+
+    .Info_Consultation button {
+        font-size: 15px;
+    }
+
+    .Service p {
+        font-size: 13px;
+    }
+
+    .Procedure_Title h2 {
+        font-size: 20px;
+    }
+
+    .Procedure_Title h2 {
+        font-size: 16px;
+    }
+
+    .Procedure_section {
+        width: 100%;
+
+    }
+
+    .Procedure_section {
+        width: 100%;
+    }
+
+    .gallery__img>div:last-child {
+        width: 30%;
+        height: 530px;
+    }
+
+    .Gallery div {
+        width: 240px;
+        height: 250px;
+    }
+
+    .Advices a {
+        font-size: 14px;
+    }
+
+    .footer>div {
+        gap: 80px;
+    }
+
+    .footer_Info h5 {
+        font-size: 19px;
+    }
+
+}
+
+@media (min-width:320px) and (max-width:1024px) {
+
+
+    .Logo img:last-child{
+        display: block;
+    }
+    .Logo img:first-child{
+        display: none;
+    }
+
+    header{
+        background-color: white;
+    }
+    header>div{
+        justify-content: flex-start;
+    }
+    .Menu_Btn {
+        display: block;
+    }
+
+    .Menu_Btn:hover ~ .Mobile_Menu {
+        height: 400px;
+        z-index: 99999999999999;
+    }
+
+    .Mobile_Menu {
+        display: flex;
+        height: 0;
+    }
+}
+
+@media(min-width:1024px) and (max-width:1200px) {
+    .Location_Links {
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .FooterLogo img {
+        width: 100px;
+        max-width: 100px;
+    }
+
+    .footer>div {
+        gap: 30px;
+    }
+
+    .footer form {
+        display: flex;
+    }
+
+    .Menu_Links>li>a {
+        font-size: 15px;
+    }
+
+    .Baner_Info_Box {
+
+        padding: 100px;
+    }
+
+    .Baner_Info_Box h2 {
+        font-size: 35px;
+    }
+
+    .Baner_Info_Box h2>span {
+        font-size: 27px;
+    }
+
+    .Info_Consultation span {
+        font-size: 18px;
+    }
+
+
+
+    .Info_Consultation {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .Baner_Info_Box button {
+        font-size: 14px;
+    }
+
+    .Info_Consultation>div {
+        width: 400px;
+    }
+
+    .Info_Consultation>div:nth-child(3) {
+        width: 70%;
+        height: 500px;
+    }
+
+    .Info_Consultation button {
+        font-size: 15px;
+    }
+
+    .Info_Consultation h1,
+    h2 {
+        font-size: 20px;
+    }
+
+    .Info_Consultation p {
+        font-size: 14px;
+    }
+
+    .Info_Consultation>div:nth-child(3) {
+        font-size: 18px;
+    }
+
+    .Service p {
+        font-size: 13px;
+        word-wrap: 20px;
+    }
+
+    .Service img {
+        width: 80px;
+        height: 100px;
+    }
+
+    .Service h3 {
+        font-size: 14px;
+
+    }
+
+    .Procedure_Title {
+        width: 860px;
+
+
+    }
+
+    .Procedure_Title button {
+        padding: 5px 10px;
+        font-size: 18px;
+    }
+
+    .Procedure {
+        width: 450px;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .Procedure h3 {
+        font-size: 15px;
+    }
+
+    .Procedure_section {
+        width: 100%;
+    }
+
+    .Procedure_Box {
+        width: 100%;
+
+    }
+
+    .Procedure img {
+        width: 100px;
+
+    }
+
+    .Gallery {
+        width: 55%;
+    }
+
+    .Gallery div {
+        width: 240px;
+        height: 250px;
+    }
+
+    .footer>div>div {
+        gap: 80px;
+        text-wrap: 50px;
+    }
+
+    .title_Button div>div>h1 {
+        font-size: 18px;
+    }
+
+    .footer input {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .footer_Info ul li {
+        font-size: 12px;
+    }
+
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+    .Location_Links {
+        display: none;
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .Baner {
+        height: 450px;
+    }
+
+    .Baner_Info_Box h2>span {
+        font-size: 30px;
+    }
+
+    .Info_Consultation {
+        font-size: 12px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .Info_Consultation>div {
+        width: 350px;
+        gap: 15px;
+
+    }
+
+    .Info_Consultation>div:nth-child(3) {
+        width: 100%;
+        height: 600px;
+    }
+
+
+    .Info_Consultation button {
+        font-size: 15px;
+    }
+
+    .Info_Consultation span {
+        margin: auto;
+    }
+
+    .Service_Container {
+        padding: 5px;
+    }
+
+    .Service_Box {
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .Service {
+        width: 320px;
+    }
+
+    .title_Button button {
+        width: auto;
+    }
+
+    .Procedure {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .Procedure_container {
+        justify-content: space-evenly;
+    }
+
+    .Procedure_section {
+        width: 100%;
+    }
+
+    .Procedure .Info {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .Procedure_Title {
+        font-size: 20px;
+        gap: 60px;
+    }
+
+    .Procedure_Title {
+        padding: 1px;
+    }
+
+    .Procedure_Box {
+        font-size: 20px;
+    }
+
+    .gallery__img>div:last-child {
+        width: 100%;
+        height: 450px;
+    }
+
+    .Gallery {
+        width: 100%;
+    }
+
+    .gallery__img {
+        flex-direction: column-reverse;
+    }
+
+    .Gallery div {
+        width: 300px;
+        height: 400px;
+
+    }
+
+    .footer>div {
+        gap: 15px;
+    }
+
+    .footer form {
+        display: flex;
+    }
+
+    .title_Button div>div>h1 {
+        font-size: 18px;
+    }
+
+    .footer input {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .footer_Info ul li {
+        font-size: 12px;
+    }
+
+    .Advices_Box {
+        flex-wrap: wrap;
+    }
+
+    .header>div {
+        box-sizing: unset;
+    }
+
+    .Menu {
+        display: none;
+    }
+
+    .Logo {
+        box-sizing: border-box;
+    }
+
+    .Baner_Info_Box h2 {
+        font-size: 35px
+    }
+}
+
+@media(min-width:552px) and (max-width:768px) {
+    .Location_Links {
+        display: none;
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .Baner {
+        height: 450px;
+        padding: 0%;
+    }
+
+    .Baner_Info_Box {
+        padding: 30px;
+    }
+
+    .Baner_Info_Box h2>span {
+        font-size: 30px;
+    }
+
+    .Info_Consultation {
+        font-size: 12px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .Info_Consultation>div {
+        width: 100%;
+        gap: 15px;
+
+    }
+
+    .Info_Consultation>div:nth-child(3) {
+        width: 100%;
+        height: 400px;
+    }
+
+
+    .Info_Consultation button {
+        font-size: 15px;
+    }
+
+    .Info_Consultation span {
+        margin: auto;
+    }
+
+    .Service_Container {
+        padding: 5px;
+    }
+
+    .Service_Box {
+        font-size: 13px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .Service {
+        width: 230px;
+    }
+
+    .title_Button button {
+        width: auto;
+    }
+
+    .Procedure {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .Procedure_container {
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    .Procedure_section {
+        width: 100%;
+    }
+
+    .Procedure .Info {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .Procedure_Title {
+        font-size: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Procedure h3 {
+        font-size: 17px;
+    }
+
+    .Procedure p {
+        font-size: 13px;
+    }
+
+    .Procedure img {
+        width: 100px;
+    }
+
+    .Procedure_Box {
+        font-size: 20px;
+    }
+
+    .gallery__img>div:last-child {
+        width: 100%;
+        height: 300px;
+    }
+
+    .Gallery {
+        width: 100%;
+    }
+
+    .gallery__img {
+        flex-direction: column-reverse;
+    }
+
+    .Gallery div {
+        width: 220px;
+        height: 250px;
+
+    }
+
+    .footer>div {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .footer form {
+        display: flex;
+    }
+
+    .title_Button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title_Button div>div>h1 {
+        font-size: 18px;
+    }
+
+    .footer_Info>div:last-child {
+        width: 100%;
+    }
+
+    .footer input {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+    }
+
+    .footer_bottom>div {
+        width: 100%;
+    }
+
+    .footer_Info ul li {
+        font-size: 12px;
+    }
+
+    .Advices_Box {
+        flex-wrap: wrap;
+    }
+
+    .header>div {
+        box-sizing: unset;
+    }
+
+    .Menu {
+        display: none;
+    }
+
+    .Logo {
+        box-sizing: border-box;
+    }
+
+    .Baner_Info_Box h2 {
+        font-size: 35px
+    }
+}
+
+@media(min-width:320px) and (max-width:552px) {
+    .Location_Links {
+        display: none;
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .Logo {
+        width: 60px;
+    }
+
+    .Baner {
+        height: auto;
+        padding: 220px 0;
+    }
+
+    .Baner_Info_Box {
+        padding: 0;
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .Baner_Info_Box div {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .Baner_Info_Box h2 {
+        text-align: center;
+    }
+
+    .Baner_Info_Box h2>span {
+        font-size: 16px;
+        padding: 0;
+        margin-left: 97px;
+    }
+
+    .Baner_Info_Box button {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 15px;
+    }
+
+    .Info_Consultation {
+        font-size: 12px;
+        gap: 15px;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .Info_Consultation>div:first-child {
+        transform: translate(0);
+    }
+
+    .Info_Consultation>div {
+        width: 100%;
+        gap: 15px;
+
+    }
+
+    .Info_Consultation>div:nth-child(3) {
+        width: 100%;
+        height: 300px;
+    }
+
+
+    .Info_Consultation button {
+        font-size: 13px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .Info_Consultation span {
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .Info_Consultation>div>div {
+        font-size: 13px;
+    }
+
+    .Info_Consultation>div>div H1 {
+        font-size: 13px;
+    }
+
+    .Servise_Title h4 {
+        font-size: 15px;
+    }
+
+    .Servise_Title h1 {
+        font-size: 18px;
+    }
+
+    .Service {
+        width: 100%;
+    }
+
+    .Service_Container {
+        padding: 5px;
+    }
+
+    .Service_Box {
+        font-size: 13px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .Procedure_Box {
+        font-size: 14px;
+        gap: 20px;
+    }
+
+
+    .Procedure_Title h4 {
+        text-align: center;
+    }
+
+    .Procedure_Title h2 {
+        font-size: 16px;
+    }
+
+    .Procedure {
+        width: 100%;
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+
+    .Procedure_container {
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    .Procedure_section {
+        width: 100%;
+    }
+
+    .Procedure .Info {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .Procedure_Title {
+        font-size: 16px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Procedure_Title button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .Procedure h3 {
+        font-size: 17px;
+    }
+
+    .Procedure p {
+        font-size: 13px;
+    }
+
+    .Procedure img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Procedure_Box {
+        font-size: 20px;
+    }
+
+    .gallery__img>div:last-child {
+        width: 100%;
+        height: 300px;
+    }
+
+    .Gallery {
+        width: 100%;
+    }
+
+    .gallery__img {
+        flex-direction: column-reverse;
+    }
+
+    .Gallery div {
+        width: 100%;
+        height: 250px;
+    }
+
+    .title_Button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title_Button div h1 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .title_Button button {
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    .Advices_Box {
+        padding: 20px;
+    }
+
+    .Advices {
+        width: 100%;
+    }
+
+    .FooterLogo {
+        width: 100px;
+    }
+
+    .footer>div {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer_Info>div:last-child {
+        width: 100%;
+    }
+
+    .footer input {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 30px;
+    }
+
+    footer input:nth-child(2) {
+        border-radius: 30px;
+    }
+
+    .Social_Links {
+        gap: 10px;
+    }
+
+    .footer>div>div {
+        width: 100%;
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+    }
+
+    .footer_bottom ul {
+        justify-content: flex-start;
+    }
+
+    .footer_bottom>div {
+        width: 100%;
+    }
+
+    .footer_Info ul li {
+        font-size: 17px;
+    }
+
+    .Advices_Box {
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .header>div {
+        box-sizing: unset;
+    }
+
+    .Menu {
+        display: none;
+    }
+
+    .Logo {
+        box-sizing: border-box;
+    }
+
+    .Baner_Info_Box h2 {
+        font-size: 25px
+    }
+}
